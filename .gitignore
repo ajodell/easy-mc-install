@@ -1,0 +1,146 @@
+# ============================================================
+# .gitignore for ModpackInstaller
+# C# / .NET 8 · AvaloniaUI · CommunityToolkit.Mvvm
+# ============================================================
+
+
+# ------------------------------------------------------------
+# .NET Build Output
+# ------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+out/
+publish/
+
+# NuGet packages (restored automatically — never commit these)
+*.nupkg
+*.snupkg
+[Pp]ackages/
+.nuget/
+
+# NuGet lock file (commit this if you want reproducible restores)
+# packages.lock.json
+
+# MSBuild binary log
+*.binlog
+
+
+# ------------------------------------------------------------
+# .NET Runtime & SDK
+# ------------------------------------------------------------
+# User-specific dotnet CLI telemetry opt-out
+.dotnet/
+
+# global.json is intentionally committed — do NOT ignore it
+
+
+# ------------------------------------------------------------
+# Visual Studio / VS Code / Rider
+# ------------------------------------------------------------
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## VS Code
+.vscode/
+!.vscode/extensions.json   # keep shared extension recommendations
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## MonoDevelop / Xamarin Studio
+*.userprefs
+
+
+# ------------------------------------------------------------
+# C# Source Generator & Roslyn Caches
+# ------------------------------------------------------------
+# CommunityToolkit.Mvvm generates partial classes into obj/ —
+# already covered by obj/ above, but be explicit:
+*.g.cs
+*.g.i.cs
+
+
+# ------------------------------------------------------------
+# Test Results & Coverage
+# ------------------------------------------------------------
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+*.trx
+lcov.info
+
+
+# ------------------------------------------------------------
+# Avalonia Designer
+# ------------------------------------------------------------
+# Avalonia previewer cache
+.avalonia/
+
+
+# ------------------------------------------------------------
+# OS-Generated Files
+# ------------------------------------------------------------
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+## Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+## Linux
+*~
+.directory
+
+
+# ------------------------------------------------------------
+# Project-Specific: Modpack Installer Runtime Artifacts
+# ------------------------------------------------------------
+
+# Downloaded ZIPs / tar.gz files (temp downloads, never commit)
+*.zip
+*.tar.gz
+*.tar
+
+# Any locally cached manifests
+manifest-cache/
+
+# Fabric installer JAR (downloaded at runtime)
+fabric-installer*.jar
+
+# Scratch / local test configs
+local-config.json
+test-manifest.json
+
+
+# ------------------------------------------------------------
+# Secrets & Environment
+# ------------------------------------------------------------
+# If you ever add API keys or tokens — never commit these
+*.env
+.env.*
+secrets.json
+appsettings.Local.json
+
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+*.log
+logs/
