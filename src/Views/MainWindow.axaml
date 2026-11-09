@@ -14,9 +14,12 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainViewModel />
     </Design.DataContext>
-
-    <TextBox Text="{Binding Greeting}"
-             HorizontalAlignment="Center"
-             VerticalAlignment="Center" />
+    <StackPanel HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Orientation="Vertical"
+                Spacing="10">
+        <TextBox Width="400" Text="{Binding ManifestUrl}"></TextBox>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding FetchManifestCommand}">Get Manifest</Button>
+    </StackPanel>
 
 </Window>
